@@ -148,7 +148,6 @@
   height: 160px;
   border: 1px solid var(--line);
   overflow: hidden;
-  filter: grayscale(20%);
 }
 
 .pb-hero-photo img {
@@ -157,6 +156,54 @@
   object-fit: cover;
   object-position: center 20%;
   display: block;
+  filter: grayscale(20%) contrast(1.05);
+  animation: vhs-glitch 6s infinite;
+}
+
+/* scanlines overlay */
+.pb-hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* vhs noise / tracking bar */
+.pb-hero-photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  animation: vhs-tracking 6s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes vhs-tracking {
+  0%   { top: -18px; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes vhs-glitch {
+  0%,  94%  { filter: grayscale(20%) contrast(1.05); transform: translate(0); }
+  95%        { filter: grayscale(20%) contrast(1.1) hue-rotate(4deg); transform: translate(-2px, 0); }
+  95.5%      { filter: grayscale(20%) contrast(1.1) hue-rotate(-4deg); transform: translate(2px, 0); }
+  96%        { filter: grayscale(20%) contrast(1.05); transform: translate(0); }
+  98%        { filter: grayscale(20%) contrast(1.15) hue-rotate(2deg) brightness(1.1); transform: translate(1px, -1px); }
+  98.5%      { filter: grayscale(20%) contrast(1.05); transform: translate(0); }
+  100%       { filter: grayscale(20%) contrast(1.05); transform: translate(0); }
 }
 
 .pb-hero-name {
