@@ -1,0 +1,33 @@
+:root {
+  /* Light — frost / icy */
+  --background: oklch(98% 0.01 240);
+  --foreground: oklch(15% 0.04 240);
+  --primary:    oklch(0.5534 0.1739 38.4);
+  --accent:     oklch(70% 0.15 210);
+  --muted:      oklch(60% 0.03 240);
+  --border:     oklch(90% 0.02 240);
+  --input:      oklch(95% 0.01 240);
+
+  /* direction-b aliases */
+  --line:   oklch(15% 0.04 240); /* hard border colour = foreground */
+  --paper:  oklch(95% 0.01 240); /* recessed surface   = input     */
+
+  /* mode-dot colour */
+  --mode: oklch(0.2126 0.0086 59.17);
+}
+
+.dark {
+  /* Dark — midnight slate */
+  --background: oklch(12% 0.03 240);
+  --foreground: oklch(95% 0.02 240);
+  --primary:    oklch(0.5534 0.1739 38.4);
+  --accent:     oklch(75% 0.14 210);
+  --muted:      oklch(45% 0.04 240);
+  --border:     oklch(25% 0.04 240);
+  --input:      oklch(18% 0.03 240);
+
+  --line:   oklch(95% 0.02 240);
+  --paper:  oklch(18% 0.03 240);
+
+  --mode: oklch(0.8369 0.1644 84.43);
+}

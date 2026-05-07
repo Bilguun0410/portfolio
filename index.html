@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilguun Munkhzul — Frontend Engineer &amp; Instructor</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+    <link rel="stylesheet" href="/styles/responsiveness.css" />
+  </head>
+  <body>
+    <!-- COMMAND BAR -->
+    <header class="cmd-bar">
+      <span class="cmd-prompt">~/bilguun.mn</span>
+      <span class="cmd-input">$ cat portfolio.md</span>
+      <div class="cmd-meta">
+        <button class="mode-toggle" onclick="toggleTheme()">
+          <span>⌘+j</span>
+          <span class="mode-dot"></span>
+          <span id="mode-text">DARK</span>
+        </button>
+        <span id="datetime-display"></span>
+      </div>
+    </header>
+
+    <!-- MAIN GRID -->
+    <main class="pb-grid">
+      <!-- HERO (full width) -->
+      <section class="pb-hero">
+        <div class="pb-hero-meta">
+          <span>~ PORTFOLIO ~</span>
+          <span>// REV.001</span>
+          <span>// UB / MN</span>
+        </div>
+
+        <pre class="pb-ascii" aria-hidden="true">
++-+-+-+-+-+-+-+
+|B|I|L|G|U|U|N|
++-+-+-+-+-+-+-+
+&gt; v.2026.05
+&gt; rev.001
+&gt; ub/mn</pre
+        >
+
+        <div class="pb-hero-photo">
+          <img src="/assets/kazue.png" alt="Bilguun Munkhzul" />
+        </div>
+
+        <h1 class="pb-hero-name">
+          Bilguun<br />
+          Munkh<span class="pb-accent">zul</span>
+        </h1>
+
+        <div class="pb-hero-bottom">
+          <p class="pb-hero-statement">
+            Senior frontend engineer at <strong>Erxes</strong>,<br />
+            senior instructor at <strong>Erxes Academy</strong>.<br />
+            I ship <mark>products</mark> and the <mark>engineers</mark>
+            who'll ship the next ones.
+          </p>
+          <div class="pb-hero-side">
+            <div class="pb-hero-row">
+              <span class="pb-key">STATUS</span>
+              <span class="pb-val">
+                <span class="pb-status-dot" aria-hidden="true"></span>OPEN TO
+                CONSULTING
+              </span>
+            </div>
+            <div class="pb-hero-row">
+              <span class="pb-key">BASED</span>
+              <span class="pb-val">ULAANBAATAR / MN</span>
+            </div>
+            <div class="pb-hero-row">
+              <span class="pb-key">STACK</span>
+              <span class="pb-val">REACT · TS · NODE · GQL</span>
+            </div>
+            <div class="pb-hero-row">
+              <span class="pb-key">TEACH</span>
+              <span class="pb-val">FRONTEND ENG · MENTORSHIP</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE (full width) -->
+      <div class="pb-marquee" aria-hidden="true">
+        <div class="pb-marquee-track">
+          <span class="pb-tag pb-tag--fill">AVAILABLE Q3 2026</span>
+          <span class="pb-tag">REACT</span>
+          <span class="pb-tag">TYPESCRIPT</span>
+          <span class="pb-tag">DESIGN SYSTEMS</span>
+          <span class="pb-tag pb-tag--fill">TEACHING</span>
+          <span class="pb-tag">ARCHITECTURE</span>
+          <span class="pb-tag">GRAPHQL</span>
+          <span class="pb-tag">MENTORSHIP</span>
+          <span class="pb-tag pb-tag--fill">OPEN SOURCE</span>
+          <span class="pb-tag pb-tag--fill">AVAILABLE Q3 2026</span>
+          <span class="pb-tag">REACT</span>
+          <span class="pb-tag">TYPESCRIPT</span>
+          <span class="pb-tag">DESIGN SYSTEMS</span>
+          <span class="pb-tag pb-tag--fill">TEACHING</span>
+          <span class="pb-tag">ARCHITECTURE</span>
+          <span class="pb-tag">GRAPHQL</span>
+          <span class="pb-tag">MENTORSHIP</span>
+          <span class="pb-tag pb-tag--fill">OPEN SOURCE</span>
+        </div>
+      </div>
+
+      <!-- 01 WORK — sidebar -->
+      <div class="pb-shead" id="work">
+        <div class="pb-shead-num">// 01</div>
+        <div class="pb-shead-title">WORK</div>
+        <div class="pb-shead-meta">
+          <strong>3</strong> selected projects<br />
+          <strong>↳</strong> hover for preview<br />
+          <strong>↳</strong> click to visit
+        </div>
+      </div>
+
+      <!-- 01 WORK — content -->
+      <div class="pb-sbody">
+        <div class="pb-work-list" id="work-list">
+          <a
+            href="https://msmgroup.mn"
+            target="_blank"
+            rel="noopener"
+            class="pb-work-row reveal"
+            data-project="0"
+          >
+            <span class="pb-work-num">[001]</span>
+            <div class="pb-work-main">
+              <span class="pb-work-name">msmgroup.mn</span>
+              <span class="pb-work-desc"
+                >Multi-tenant corporate platform, 6 brand sites, headless
+                CMS</span
+              >
+            </div>
+            <div class="pb-work-meta">
+              NEXT.JS · 2022<br />
+              <span class="pb-work-role">FRONTEND</span>
+            </div>
+          </a>
+          <a
+            href="https://erxes.io"
+            target="_blank"
+            rel="noopener"
+            class="pb-work-row reveal"
+            data-project="1"
+          >
+            <span class="pb-work-num">[002]</span>
+            <div class="pb-work-main">
+              <span class="pb-work-name">erxes.io</span>
+              <span class="pb-work-desc"
+                >Marketing &amp; docs site for the open-source XOS, ~120k
+                MAU</span
+              >
+            </div>
+            <div class="pb-work-meta">
+              NEXT.JS · REACT · 2024<br />
+              <span class="pb-work-role">FRONTEND</span>
+            </div>
+          </a>
+          <a
+            href="https://www.girhub.com/erxes/erxes"
+            target="_blank"
+            rel="noopener"
+            class="pb-work-row reveal"
+            data-project="2"
+          >
+            <span class="pb-work-num">[003]</span>
+            <div class="pb-work-main">
+              <span class="pb-work-name">erxes XOS</span>
+              <span class="pb-work-desc"
+                >Plugin-based experience operating system, core shell
+                architecture</span
+              >
+            </div>
+            <div class="pb-work-meta">
+              REACT · MONOREPO · ONGOING<br />
+              <span class="pb-work-role">FRONTEND</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 02 ABOUT — sidebar -->
+      <div class="pb-shead" id="about">
+        <div class="pb-shead-num">// 02</div>
+        <div class="pb-shead-title">ABOUT</div>
+        <div class="pb-shead-meta">
+          <strong>BIO.MD</strong><br />
+          <span class="pb-muted">last edit: 2026-05-07</span>
+        </div>
+      </div>
+
+      <!-- 02 ABOUT — content -->
+      <div class="pb-sbody">
+        <p class="pb-about reveal">
+          I build <em>frontends</em> that survive contact with real users — and
+          <em>teach</em> the engineers who build the next ones.
+        </p>
+        <p class="pb-about reveal">
+          <strong>4 years</strong> across product UIs, design systems, and
+          architecture decisions that quietly determine whether a codebase ages
+          well or rots in eighteen months.
+        </p>
+        <div class="pb-stats">
+          <div class="pb-stat reveal">
+            <div class="pb-stat-n">04<span class="pb-stat-unit">yr</span></div>
+            <div class="pb-stat-l">SHIPPING</div>
+          </div>
+          <div class="pb-stat reveal">
+            <div class="pb-stat-n">50<span class="pb-stat-accent">+</span></div>
+            <div class="pb-stat-l">STUDENTS TAUGHT</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 CV — sidebar -->
+      <div class="pb-shead" id="cv">
+        <div class="pb-shead-num">// 03</div>
+        <div class="pb-shead-title">CV</div>
+        <div class="pb-shead-meta">
+          <strong>↳</strong> chronological<br />
+          <strong>■</strong> = current
+        </div>
+      </div>
+
+      <!-- 03 CV — content -->
+      <div class="pb-sbody">
+        <div class="pb-cv-row reveal">
+          <span class="pb-cv-year">2022 — NOW</span>
+          <span class="pb-cv-role">Frontend Engineer</span>
+          <span class="pb-cv-org">Erxes Inc.</span>
+          <span class="pb-cv-current" title="Current role"></span>
+        </div>
+        <div class="pb-cv-row reveal">
+          <span class="pb-cv-year">2022 - 2023</span>
+          <span class="pb-cv-role">Junior Developer - MSM Group</span>
+          <span class="pb-cv-org">Erxes Inc.</span>
+          <span></span>
+        </div>
+        <div class="pb-cv-row reveal">
+          <span class="pb-cv-year">2023 - NOW</span>
+          <span class="pb-cv-role">Senior Frontend Engineer</span>
+          <span class="pb-cv-org">Erxes Inc.</span>
+          <span></span>
+        </div>
+        <div class="pb-cv-row reveal">
+          <span class="pb-cv-year">2025</span>
+          <span class="pb-cv-role">Instructor</span>
+          <span class="pb-cv-org"
+            >Олон Улсын Эдийн Засаг Бизнесийн Их Сургууль</span
+          >
+          <span></span>
+        </div>
+        <div class="pb-cv-row reveal">
+          <span class="pb-cv-year">2025 — NOW</span>
+          <span class="pb-cv-role">Senior Instructor</span>
+          <span class="pb-cv-org">Erxes Academy</span>
+          <span class="pb-cv-current" title="Current role"></span>
+        </div>
+      </div>
+
+      <!-- CONTACT (full width, inverted) -->
+      <section class="pb-contact" id="contact">
+        <div class="pb-contact-eye">// 04 — CONTACT</div>
+        <h2 class="pb-contact-heading">
+          $ ./hire-me<br />
+          <a href="mailto:bilguunmunkhzul@gmail.com" class="pb-contact-email"
+            >bilguunmunkhzul@gmail.com</a
+          >
+          <span class="pb-contact-arrow">↗</span>
+        </h2>
+        <div class="pb-contact-grid">
+          <a
+            href="https://github.com/Bilguun0410"
+            target="_blank"
+            rel="noopener"
+            class="pb-contact-item"
+          >
+            <div class="pb-contact-item-key">GITHUB</div>
+            <div class="pb-contact-item-val">@bilguun <span>↗</span></div>
+          </a>
+          <a
+            href="https://linkedin.com/in/bilguun-munkhzul-7699673a5"
+            target="_blank"
+            rel="noopener"
+            class="pb-contact-item"
+          >
+            <div class="pb-contact-item-key">LINKEDIN</div>
+            <div class="pb-contact-item-val">/in/bilguun <span>↗</span></div>
+          </a>
+          <a
+            href="https://twitter.com/410Kazue"
+            target="_blank"
+            rel="noopener"
+            class="pb-contact-item"
+          >
+            <div class="pb-contact-item-key">TWITTER</div>
+            <div class="pb-contact-item-val">@410Kazue <span>↗</span></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="pb-footer">
+        <span>© 2026 BILGUUN MUNKHZUL</span>
+        <span>SET IN SPACE GROTESK &amp; JETBRAINS MONO</span>
+        <span>UB / MN / UTC+8</span>
+      </footer>
+    </main>
+
+    <!-- HOVER PREVIEW CARD -->
+    <div class="pb-preview" id="work-preview" aria-hidden="true">
+      <div class="pb-preview-bar">
+        <i></i><i></i><i></i>
+        <span id="preview-title"></span>
+      </div>
+      <div class="pb-preview-body">
+        <div class="pb-preview-header" id="preview-name"></div>
+        <i class="pb-preview-line" style="width: 70%"></i>
+        <i class="pb-preview-line" style="width: 90%"></i>
+        <i class="pb-preview-line" style="width: 60%"></i>
+        <div class="pb-preview-block">
+          <span id="preview-role"></span>
+          <span id="preview-meta"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/toggle.js"></script>
+    <script src="/user-prefer-mode.js"></script>
+    <script src="/datetime-display.js"></script>
+    <script src="/portfolio.js"></script>
+  </body>
+</html>

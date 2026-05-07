@@ -1,0 +1,123 @@
+/* ── Responsive adjustments ── */
+
+@media screen and (max-width: 1024px) {
+  .pb-hero-name {
+    font-size: clamp(48px, 10vw, 120px);
+  }
+
+  .pb-work-main {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .pb-contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Stack the two-column grid to single column */
+  .pb-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make section headers horizontal instead of sticky sidebar */
+  .pb-shead {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .pb-shead-title {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .pb-shead-meta { display: none; }
+
+  .pb-sbody {
+    padding: 24px 24px 40px;
+  }
+
+  /* Hero */
+  .pb-ascii { display: none; }
+
+  .pb-hero-photo {
+    position: static;
+    width: 80px;
+    height: 90px;
+    margin-bottom: 16px;
+  }
+
+  .pb-hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .pb-hero-statement { font-size: 18px; }
+
+  /* Marquee */
+  .pb-marquee { font-size: 20px; }
+
+  /* Work rows */
+  .pb-work-row {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .pb-work-meta { display: none; }
+
+  .pb-work-main {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .pb-work-name { font-size: 18px; }
+
+  /* About */
+  .pb-about { font-size: 20px; }
+
+  .pb-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .pb-stat { border-right: none; border-bottom: 1px solid var(--line); }
+  .pb-stat:last-child { border-bottom: none; }
+
+  /* CV */
+  .pb-cv-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .pb-cv-current { display: none; }
+
+  /* Contact */
+  .pb-contact-heading { font-size: clamp(36px, 8vw, 64px); }
+  .pb-contact-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .pb-footer {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* Command bar */
+  .cmd-bar { padding: 8px 16px; gap: 12px; }
+  .cmd-input { display: none; }
+}
+
+@media screen and (max-width: 480px) {
+  .pb-contact-grid { grid-template-columns: 1fr; }
+
+  .pb-hero {
+    padding: 32px 16px 24px;
+  }
+
+  .pb-sbody { padding: 20px 16px 32px; }
+  .pb-contact { padding: 40px 16px; }
+  .pb-footer { padding: 12px 16px; }
+  .cmd-bar { padding: 8px 16px; }
+}
